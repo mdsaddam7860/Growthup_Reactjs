@@ -1,0 +1,456 @@
+/*-----------------------------------*\
+  #contact-col
+\*-----------------------------------*/
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+     * colors
+     */
+
+  --safety-orange: hsl(25, 100%, 50%);
+  --lavender-gray: hsl(230, 19%, 81%);
+  --persian-rose: hsl(328, 100%, 59%);
+  --red-crayola: hsl(341, 100%, 49%);
+  --eerie-black: hsl(240, 6%, 10%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured-2: hsl(210, 60%, 98%);
+  --platinum: hsl(0, 0%, 90%);
+  --gray-web: hsl(220, 5%, 49%);
+  --cultured: hsl(0, 0%, 93%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 14%, 98%);
+  --black: hsl(0, 0%, 0%);
+
+  /**
+     * gradient color
+     */
+
+  --gradient: linear-gradient(
+    to left top,
+    var(--persian-rose),
+    var(--safety-orange)
+  );
+
+  /**
+     * typography
+     */
+
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-league-spartan: "League Spartan", sans-serif;
+
+  --fs-1: 3.5rem;
+  --fs-2: 3rem;
+  --fs-3: 2.1rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.3rem;
+
+  --fw-700: 700;
+  --fw-500: 500;
+
+  /**
+     * spacing
+     */
+
+  --section-padding: 60px;
+
+  /**
+     * shadow
+     */
+
+  --shadow-1: 0 6px 24px var(--black_5);
+  --shadow-2: 0 2px 28px var(--black_10);
+
+  /**
+     * border radius
+     */
+
+  --radius-2: 2px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+
+  /**
+     * transition
+     */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.container-con {
+  padding-inline: 100px;
+  margin-bottom: 35px;
+}
+.margin-contact{
+  margin-top: 8rem;
+
+}
+
+#contact-col .btn {
+  max-width: max-content;
+  color: var(--white-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  padding: 10px 30px;
+  border-radius: var(--radius-5);
+  transition: var(--transition-1);
+}
+
+#contact-col .btn-primary {
+  background-image: var(--gradient);
+  background-size: 1000%;
+}
+
+#contact-col .btn-primary:is(:hover, :focus) {
+  background-position: bottom right;
+}
+
+#contact-col .btn-secondary {
+  background-color: var(--white-1);
+  color: var(--eerie-black);
+}
+
+#contact-col .btn-secondary:is(:hover, :focus) {
+  background-color: var(--eerie-black);
+  color: var(--white-1);
+}
+
+#contact-col .section {
+  padding-block: var(--section-padding);
+}
+
+#contact-col .h1,
+#contact-col .h2,
+#contact-col .h3 {
+  color: var(--eerie-black);
+  font-family: var(--ff-league-spartan);
+  line-height: 1.2;
+}
+
+#contact-col .h1 {
+  font-size: var(--fs-1);
+}
+
+#contact-col .h2 {
+  font-size: var(--fs-2);
+}
+
+#contact-col .h3 {
+  font-size: var(--fs-3);
+}
+
+#contact-col .w-100 {
+  width: 100%;
+}
+
+#contact-col .section-title,
+#contact-col .section-text {
+  text-align: center;
+  margin-top: 35px;
+}
+
+#contact-col .section-text {
+  font-size: var(--fs-6);
+}
+
+#contact-col .grid-list {
+  display: grid;
+  gap: 30px;
+}
+
+#contact-col .img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+}
+
+#contact-col .img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#contact-col li {
+  list-style: none;
+}
+
+#contact-col a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contact-col a,
+#contact-col img,
+#contact-col span,
+#contact-col time,
+#contact-col label,
+#contact-col input,
+#contact-col button,
+#contact-col textarea,
+ion-icon {
+  display: block;
+}
+
+#contact-col img {
+  height: auto;
+}
+
+#contact-col input,
+#contact-col button,
+#contact-col textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+#contact-col input,
+#contact-col textarea {
+  width: 100%;
+}
+
+#contact-col button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+#contact-col address {
+  font-style: normal;
+}
+
+html {
+  font-family: var(--ff-roboto);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white-1);
+  color: var(--gray-web);
+  /* font-size: 1.6rem;
+  line-height: 1.8; */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+#contact-col .contact-col {
+  background-color: var(--white-2);
+}
+
+#contact-col .contact .section-text {
+  margin-block: 5px 35px;
+}
+
+#contact-col .contact-form {
+  background-color: var(--white-1);
+  padding: 20px;
+  border-radius: var(--radius-2);
+  margin-block-end: 30px;
+  box-shadow: var(--shadow-1);
+}
+
+#contact-col .input-field {
+  background-color: var(--white-2);
+  color: var(--eerie-black);
+  font-size: var(--fs-5);
+  padding: 15px;
+  border-radius: var(--radius-2);
+  outline: 1px solid transparent;
+  outline-offset: 0;
+  margin-block-end: 15px;
+}
+
+#contact-col .input-field::-webkit-inner-spin-button {
+  display: none;
+}
+
+#contact-col .input-field:focus {
+  outline-color: var(--red-crayola);
+}
+
+#contact-col .input-field::placeholder {
+  transition: var(--transition-1);
+}
+
+#contact-col .input-field:focus::placeholder {
+  opacity: 0;
+}
+
+#contact-col textarea.input-field {
+  resize: vertical;
+  min-height: 80px;
+  height: 100px;
+  max-height: 200px;
+  overscroll-behavior: contain;
+}
+
+#contact-col .checkbox {
+  width: max-content;
+  margin-block-start: 5px;
+  accent-color: var(--red-crayola);
+}
+
+#contact-col .label-link {
+  display: inline-block;
+  color: var(--red-crayola);
+}
+
+#contact-col .label-link:is(:hover, :focus) {
+  text-decoration: underline;
+}
+
+#contact-col .checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-block-end: 15px;
+}
+
+#contact-col .checkbox-wrapper .label {
+  font-size: var(--fs-6);
+}
+
+#contact-col .contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 25px;
+}
+
+#contact-col .contact-item {
+  min-width: 100%;
+}
+
+#contact-col .contact-card {
+  background-color: var(--white-1);
+  padding: 20px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+#contact-col .contact-card .card-icon {
+  background-color: var(--cultured-2);
+  color: var(--red-crayola);
+  font-size: 25px;
+  padding: 13px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+#contact-col .contact-card:is(:hover, :focus) .card-icon {
+  background-color: var(--red-crayola);
+  color: var(--white-1);
+}
+
+#contact-col .contact-card .card-title {
+  margin-block-end: 5px;
+}
+
+#contact-col .contact-card :is(.card-link, .card-address) {
+  font-size: var(--fs-6);
+  transition: var(--transition-1);
+}
+
+#contact-col .contact-card .card-link:is(:hover, :focus) {
+  color: var(--red-crayola);
+}
+
+/**
+   * CONTACT
+   */
+
+#contact-col .input-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+#contact-col .contact-item {
+  min-width: calc(50% - 18px);
+}
+
+#contact-col .contact-form {
+  padding: 30px;
+}
+
+#contact-col .contact-item {
+  min-width: calc(50% - 12.5px);
+}
+
+#contact-col .checkbox-wrapper {
+  margin-block: 20px;
+}
+
+#contact-col .contact-item {
+  min-width: calc(33.33% - 16.66px);
+}
+
+#contact-col .contact-card {
+  padding: 30px;
+}
+
+#contact-col .contact-card .card-icon {
+  font-size: 32px;
+}
+
+#contact-col .contact-form {
+  padding: 50px;
+}
+
+#contact-col .contact-card {
+  gap: 20px;
+}
+
+#contact-col .contact-card .card-icon {
+  padding: 15px;
+}
+
+
+
+
+@media (max-width: 480px){
+  .container-con{
+    padding-inline: 24px;
+  }
+}
